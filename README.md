@@ -1,2 +1,2 @@
-# pokemon-api
+# pokemon api
 API for Pokemon Data
