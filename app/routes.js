@@ -1,9 +1,9 @@
 var resources = require('./resources');
 
-var routes = function(app) {
-    app.get('/healthcheck', resources.healthCheck);
-    app.get('/pokemon', resources.get);
-    app.get('/pokemon/:id', resources.getById);
+var routes = function(server) {
+    server.get('/healthcheck', resources.healthCheck);
+    server.get('/pokemon', resources.get);
+    server.get('/pokemon/:id', resources.getById);
 }
 
 module.exports = routes;
