@@ -13,3 +13,13 @@ exports.get = function(req, res) {
         }
     });
 }
+
+exports.getById = function(req, res) {
+    service.getById(req.params.id, function(err, result) {
+        if(err) {
+            res.status(500).render('error', {error: err});
+        } else {
+            res.status(200).json(result);
+        }
+    });
+}

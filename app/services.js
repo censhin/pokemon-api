@@ -5,3 +5,9 @@ exports.get = function(next) {
         next(err, { pokemon: result });
     });
 }
+
+exports.getById = function(id, next) {
+    dao.getById(id, function(err, result) {
+        next(err, result);
+    });
+}
