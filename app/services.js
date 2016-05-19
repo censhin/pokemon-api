@@ -1,7 +1,7 @@
-var dao = require('./dao.js');
+var dao = require('./daos.js');
 
 exports.get = function(next) {
     dao.get(function(err, result) {
-        next(err, result);
+        next(err, { pokemon: result });
     });
 }

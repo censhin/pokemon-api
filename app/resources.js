@@ -6,6 +6,10 @@ exports.healthCheck = function(req, res) {
 
 exports.get = function(req, res) {
     service.get(function(err, result) {
-        res.json(result);
+        if(err) {
+            res.status(500).render('error', {error: err});
+        } else {
+            res.status(200).json(result);
+        }
     });
 }
