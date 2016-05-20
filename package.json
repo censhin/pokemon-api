@@ -2,14 +2,15 @@
   "name": "pokemon-api",
   "version": "1.0.0",
   "description": "RESTful API for Pokemon data",
-  "main": "app.js",
+  "main": "server.js",
   "dependencies": {
     "express": "^4.13.4",
     "mongodb": "^2.1.19"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app/server.js"
   },
   "repository": {
     "type": "git",

@@ -5,9 +5,10 @@ var routes = require('./routes.js');
 
 var server = express();
 var port = 8000;
-var host = 'localhost';
+var host = '172.17.0.2';
 var dbPort = '27017';
 var url = 'mongodb://' + host + ':' + dbPort + '/pokedex';
+console.log(url);
 
 routes(server);
 
