@@ -1,6 +1,8 @@
+var bodyParser = require('body-parser');
 var resources = require('./resources');
 
 var routes = function(server) {
+    server.use(bodyParser.json());
     server.get('/healthcheck', resources.healthCheck);
     server.get('/pokemon', resources.get);
     server.post('/pokemon', resources.create);

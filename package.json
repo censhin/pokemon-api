@@ -4,6 +4,7 @@
   "description": "RESTful API for Pokemon data",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "mongodb": "^2.1.19"
   },

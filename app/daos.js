@@ -16,7 +16,6 @@ exports.readById = function(id, next) {
 
     collection.findOne({ name: id }, { _id: 0 }, function(err, doc) {
         assert.equal(null, err);
-        assert.equal(1, docs.length);
         next(err, doc);
     });
 }
@@ -45,7 +44,7 @@ exports.update = function(id, body, next) {
 exports.delete = function(id, next) {
     var collection = db.getDb().collection('pokemon');
 
-    collecton.deleteOne(id, function(err, result) {
+    collection.deleteOne(id, function(err, result) {
         assert.equal(null, err);
         assert.equal(1, result.deletedCount);
         next(err, result);

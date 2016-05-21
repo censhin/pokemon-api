@@ -33,7 +33,7 @@ exports.update = function(id, body, next) {
 }
 
 exports.delete = function(id, next) {
-    dao.delete(id, function(err, result) {
+    dao.delete({ name: id }, function(err, result) {
         next(err, result);
     });
 }
