@@ -1,9 +1,10 @@
 var assert = require('assert');
 var db = require('./db.js');
 
-var collection = db.getDb().collection('pokemon');
 
 exports.read = function(next) {
+    var collection = db.getDb().collection('pokemon');
+
     collection.find({}, { _id: 0 }).toArray(function(err, docs) {
         assert.equal(null, err);
         next(err, docs);
@@ -11,6 +12,8 @@ exports.read = function(next) {
 }
 
 exports.readById = function(id, next) {
+    var collection = db.getDb().collection('pokemon');
+
     collection.findOne({ name: id }, { _id: 0 }, function(err, doc) {
         assert.equal(null, err);
         assert.equal(1, docs.length);
@@ -19,6 +22,8 @@ exports.readById = function(id, next) {
 }
 
 exports.create = function(body, next) {
+    var collection = db.getDb().collection('pokemon');
+
     collection.insertOne(body, function(err, result) {
         assert.equal(null, err);
         assert.equal(1, result.insertedCount);
@@ -27,6 +32,8 @@ exports.create = function(body, next) {
 }
 
 exports.update = function(id, body, next) {
+    var collection = db.getDb().collection('pokemon');
+
     collection.updateOne(id, body, function(err, result) {
         assert.equal(null, err);
         assert.equal(1, result.matchedCount);
@@ -36,6 +43,8 @@ exports.update = function(id, body, next) {
 }
 
 exports.delete = function(id, next) {
+    var collection = db.getDb().collection('pokemon');
+
     collecton.deleteOne(id, function(err, result) {
         assert.equal(null, err);
         assert.equal(1, result.deletedCount);
