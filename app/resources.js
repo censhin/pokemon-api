@@ -29,7 +29,7 @@ exports.create = function(req, res) {
         if(err) {
             res.status(500).render('error', { error: err });
         } else {
-            res.status(204);
+            res.status(204).end("ok");
         }
     });
 };
@@ -39,7 +39,7 @@ exports.update = function(req, res) {
         if(err) {
             res.status(500).render('error', { error: err });
         } else {
-            res.status(204);
+            res.status(204).end("ok");
         }
     });
 };
@@ -49,7 +49,7 @@ exports.delete = function(req, res) {
         if(err) {
             res.status(500).render('error', { error: err });
         } else {
-            res.status(204);
+            res.status(204).end("ok");
         }
     });
 };

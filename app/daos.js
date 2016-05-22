@@ -1,7 +1,6 @@
 var assert = require('assert');
 var db = require('./db.js');
 
-
 exports.read = function(next) {
     var collection = db.getDb().collection('pokemon');
 
