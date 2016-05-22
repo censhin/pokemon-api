@@ -8,7 +8,7 @@ exports.get = function(next) {
             next(err, { pokemon: [] });
         }
     });
-}
+};
 
 exports.getById = function(id, next) {
     dao.readById(id, function(err, result) {
@@ -18,22 +18,22 @@ exports.getById = function(id, next) {
             next(err, {});
         }
     });
-}
+};
 
 exports.create = function(body, next) {
     dao.create(body, function(err, result) {
         next(err, result);
     });
-}
+};
 
 exports.update = function(id, body, next) {
     dao.update(id, body, function(err, result) {
         next(err, result);
     });
-}
+};
 
 exports.delete = function(id, next) {
     dao.delete({ name: id }, function(err, result) {
         next(err, result);
     });
-}
+};

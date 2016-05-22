@@ -9,7 +9,7 @@ exports.read = function(next) {
         assert.equal(null, err);
         next(err, docs);
     });
-}
+};
 
 exports.readById = function(id, next) {
     var collection = db.getDb().collection('pokemon');
@@ -18,7 +18,7 @@ exports.readById = function(id, next) {
         assert.equal(null, err);
         next(err, doc);
     });
-}
+};
 
 exports.create = function(body, next) {
     var collection = db.getDb().collection('pokemon');
@@ -28,7 +28,7 @@ exports.create = function(body, next) {
         assert.equal(1, result.insertedCount);
         next(err, result);
     });
-}
+};
 
 exports.update = function(id, body, next) {
     var collection = db.getDb().collection('pokemon');
@@ -39,7 +39,7 @@ exports.update = function(id, body, next) {
         assert.equal(1, result.modifiedCount);
         next(err, result);
     });
-}
+};
 
 exports.delete = function(id, next) {
     var collection = db.getDb().collection('pokemon');
@@ -49,4 +49,4 @@ exports.delete = function(id, next) {
         assert.equal(1, result.deletedCount);
         next(err, result);
     });
-}
+};

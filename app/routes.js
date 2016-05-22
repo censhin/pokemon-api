@@ -9,6 +9,6 @@ var routes = function(server) {
     server.get('/pokemon/:id', resources.getById);
     server.put('/pokemon/:id', resources.update);
     server.delete('/pokemon/:id', resources.delete);
-}
+};
 
 module.exports = routes;
